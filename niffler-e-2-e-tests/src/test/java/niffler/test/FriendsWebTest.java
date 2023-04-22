@@ -46,4 +46,11 @@ public class FriendsWebTest extends BaseWebTest {
         .should(Condition.visible);
   }
 
+  @AllureId("103")
+  @Test
+  void shouldBeTwoFriendInTest(@User(userType = INVITATION_SENT) UserJson user, @User(userType = INVITATION_SENT) UserJson anotherUser) {
+    System.out.println(user.getUsername());
+    System.out.println(anotherUser.getUsername());
+  }
+
 }
