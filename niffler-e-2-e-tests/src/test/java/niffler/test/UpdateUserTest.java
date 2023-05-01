@@ -3,7 +3,6 @@ package niffler.test;
 import io.qameta.allure.AllureId;
 import niffler.api.UserUpdateService;
 import niffler.jupiter.annotation.ClasspathUser;
-import niffler.jupiter.annotation.UserInfo;
 import niffler.model.UserJson;
 import okhttp3.OkHttpClient;
 import org.junit.jupiter.api.Assertions;
@@ -35,7 +34,7 @@ public class UpdateUserTest extends BaseWebTest {
     })
     @AllureId("999")
     @ParameterizedTest
-    void updateUserTest(@ClasspathUser @UserInfo(firstname = "2", surname = "2", currency = "USD") UserJson user) throws IOException {
+    void updateUserTest(@ClasspathUser  UserJson user) throws IOException {
 
         var statusCode = userUpdateService.updateUser(user)
                 .execute().code();
