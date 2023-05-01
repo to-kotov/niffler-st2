@@ -54,16 +54,6 @@ public class FriendsWebTest extends BaseWebTest {
     System.out.println(someUser.getUsername());
   }
 
-//TODO waitService with timeout
-
-//  @AllureId("104-1")
-//  @Test
-//  void shouldBeTwoFriendInTest(@User(userType = INVITATION_SENT) UserJson user, @User(userType = INVITATION_SENT) UserJson anotherUser,@User(userType = INVITATION_SENT) UserJson someUser) throws InterruptedException {
-//    System.out.println(user.getUsername());
-//    System.out.println(anotherUser.getUsername());
-//    System.out.println(someUser.getUsername());
-//  }
-
   @AllureId("105")
   @Test
   void shouldBeTwoDifferentTypeFriendInTest(@User(userType = INVITATION_SENT) UserJson user, @User(userType = WITH_FRIENDS) UserJson anotherUser) throws InterruptedException {
