@@ -1,4 +1,7 @@
 {
   "username": "dima",
-  "password": "123456"
+  "password": "123456",
+  "firstname": "2",
+  "surname": "2",
+  "currency": "USD"
 }
